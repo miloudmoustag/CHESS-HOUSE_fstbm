@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750">
+  <defs>
+    <pattern id="board" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#2E2B27"/>
+      <rect x="40" width="40" height="40" fill="#262421"/>
+      <rect y="40" width="40" height="40" fill="#262421"/>
+      <rect x="40" y="40" width="40" height="40" fill="#2E2B27"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="750" fill="url(#board)"/>
+  <rect x="24" y="24" width="552" height="702" fill="none" stroke="#769656" stroke-width="2" stroke-opacity="0.6"/>
+  <rect x="80" y="303" width="440" height="144" rx="8" fill="#262421" fill-opacity="0.92" stroke="#C9A24B" stroke-width="1.5"/>
+  <text x="300" y="357" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="24" fill="#EEEED2">BOARD EVENTS</text>
+  <text x="300" y="387" text-anchor="middle" font-family="monospace" font-size="16" fill="#C9A24B">600x750</text>
+  <text x="300" y="415" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#B8B3A8">Haitam Daoud · 2026/27</text>
+</svg>

@@ -1,0 +1,318 @@
+# MASTER PROMPT: Chess House Club full website (club site + sign-ups + tournaments + study platform)
+
+Paste everything below into your AI builder (Claude Code, Cursor, etc.) and attach the three uploaded projects as reference code:
+1. `chess-house-tournament-signup` (the tournament sign-up app: Supabase SQL, `/api/register`, i18n, design)
+2. `chess-signup` (the older, simpler sign-up version)
+3. `chessflow-midgame` (the study platform: slides, Practice Lab, mistake analyzer, AI coach)
+
+---
+
+## 1. ROLE AND WORKING RULES
+
+You are a senior full-stack developer and a product designer. Build ONE complete, secure, beautiful, chess-themed website for a university chess club. It must define the club, its principles and activities, and everything the club plans to do. It must contain three working systems: (a) club membership and tournament sign-up, (b) a tournament and events manager with an admin area, and (c) an interactive chess study platform.
+
+Rules:
+- Work autonomously. Do not ask me questions. Where information is missing, use a sensible default and put it in ONE constants file (`src/config/site.ts`) or an environment variable, so I can change it in one place. Mark every guess with a `// TODO-CONFIRM` comment and list all of them in the README under "Things to confirm".
+- **Reuse, do not rewrite, what already works** in the three attached projects: the SQL name-matching logic, the `register_player` function, the Turnstile + honeypot + rate-limit pattern, the i18n strings, the "Pawn to Queen" progress track, the study slides data, the chess engine, the mistake analyzer, the practice drills and the coach. Port them into the new single project and fix what is listed in section 12.
+- Everything must run on **free tiers only: Vercel (Hobby) + Supabase (Free) + Cloudflare Turnstile (free)**. Design every feature to fit those limits (section 3).
+- Focus your effort on **design** and **backend quality**. Write the full code, not outlines.
+- **Photos:** do NOT leave broken images and do NOT use copyrighted images. Generate clearly labelled **dummy placeholder images** (local SVG or WebP files in `/public/images/placeholders/`, each showing its slot name and size, for example "GALLERY 03, 1200x800"). Create one manifest file `src/data/images.ts` that lists every image slot (id, file path, alt text in FR/EN/AR, recommended size, where it is used) so I can swap each placeholder for a real photo of our activities by replacing a file or one line. Use my real logos where given: `/public/assets/club-logo.png` and `/public/assets/fst-logo.png` (they exist in the sign-up project).
+- Language of all code, comments and README: English. Language of the site: French (default), English, Arabic (full RTL).
+
+---
+
+## 2. ABOUT THE CLUB (use these facts; do not invent others)
+
+### Identity
+- **Name:** Chess House Club (cover/branding variant: "Club CHESS HOUSE BM").
+- **Home:** Faculté des Sciences et Techniques de Béni Mellal (FST), Université Sultan Moulay Slimane, Morocco.
+- **Founded:** 18 October 2025.
+- **Contact (public):** Chesshouse58@gmail.com, Instagram @chess_house_fstbm. President's personal phone/email exist (miloudmoustage@gmail.com, 0634 262 883) but must be hidden by default behind a flag `SHOW_PERSONAL_CONTACT=false`.
+- **Logo:** the club logo, plus a variant with "FST" under CHESS and "BM" under HOUSE. Use both logos in the header and footer (club logo top-left, faculty logo top-right on formal pages).
+
+### Tone of the copy
+Formal, simple, professional, sincere. **No marketing slogans, no hype.** Warm but factual. Write the About, Principles and activity descriptions yourself in FR, EN and AR from the facts below, without inventing achievements.
+
+### Principles (derive the wording from these)
+- Open to all students of the university, beginners included; men's and women's categories exist in competitions.
+- Learning before competing: a structured course for new players every week.
+- We teach **backwards**: endgames first, then the middlegame, then the opening, so players understand why moves work before memorising them.
+- Fair play, respect, and a friendly, organised community.
+- Connection beyond the faculty: online tournaments with universities across Morocco.
+- Transparency: a published internal regulation (règlement intérieur) and a clear elected board.
+
+### Board
+- **2026/27 (elected 25 September 2026, 15 members present):**
+  - President: Miloud Moustage
+  - Vice-President: Douae Bouuda
+  - Secrétaire Général: Ayoub Elataoui
+  - Treasurer: Khalid Elmouhi
+  - Events: Haitam Daoud
+  - Communication: Youssef Hamdan
+  - Media: Doha Douhabi
+- **2025/26 (history section):** Oussama Idlil (President), Miloud Moustage (Treasurer), Mohamed Farsaoui (Activities).
+- Show board cards with dummy portrait placeholders and an editable role description. Show the 2025/26 board in a small "history" block.
+
+### Regular activities
+- **Two sessions per week:** Monday and Thursday, 12:00-14:00. (Monday = room in Block A, about 20-30 people; Thursday = room in Block C, about 50-60 people. `TODO-CONFIRM`.)
+- **Beginner training every week during the Monday session** for new players (the study programme in section 8 is its backbone).
+- **One inter-university ONLINE tournament every week.** Last week's edition gathered **24 clubs from across the country**. (Earlier online edition, IUCC: 22 universities, 220+ students.) Show these as editable stats.
+- Thursday format is general play, games and practice (`TODO-CONFIRM`).
+
+### Past events (show in an events timeline and a gallery)
+- **30 October 2026: "Chess Cinema", a Halloween movie night open to all the university's students** (chess-themed film screening). (`TODO-CONFIRM` the exact title and format.)
+- Halloween chess event (earlier, successful).
+- Online inter-university tournaments (weekly; IUCC with 22 universities and 220+ students; last week 24 clubs).
+- Club founding and first sessions, October 2025.
+
+### Annual plan 2026/27 (show as an interactive roadmap)
+1. Integration day (`TODO-CONFIRM` date: 5 October 2026 per the club plan; an older document said 24 September; show as "October 2026" until confirmed and store the date in config).
+2. Beginner training, October to June.
+3. Internal championship in November, with Men's and Women's categories.
+4. Team tournament between schools in December.
+5. Simultaneous exhibition with a Moroccan champion in February.
+6. National tournament between the FSTs in March.
+7. Weekly inter-university online tournament (all year).
+
+### Next tournament (seed this as the first tournament in the DB)
+- **In person, Monday 30 November 2026, 12:00-16:00, Block A courtyard, FST Béni Mellal.**
+- Members only, **9 rounds**, **5+2** time control, **20 boards**, small snack buffet for registered players, categories **Open** and **Women**.
+- Entry fee: unknown. Add `ENTRY_FEE = null` in config and show nothing when null.
+- Registration deadline: default to the day before at 18:00 (`TODO-CONFIRM`).
+
+### Sponsors / partners
+Include a "Partners and Sponsors" page: why partner with the club, what we do, audience reach (use the stats above), partnership tiers as **editable placeholders**, a "Download the sponsorship dossier" button (placeholder PDF path), and a partner-enquiry form. Add a dummy logo grid.
+
+### Documents to offer for download (placeholders, I will upload the real files)
+Règlement intérieur (FR and AR), club presentation (FR), election minutes. Put them in `/public/docs/` with a manifest.
+
+---
+
+## 3. HARD CONSTRAINTS: VERCEL HOBBY + SUPABASE FREE
+
+Design the whole project so it deploys as **one Vercel project from one Git repo** and stays inside free limits:
+- **Frontend:** Vite + React 19 + TypeScript + Tailwind CSS 4 + `motion` + `chess.js` + `lucide-react` (the study platform already uses this stack, so reuse it). Client routing with React Router (or TanStack Router). Code-split per route; the study platform and the admin area must be lazy-loaded so the landing page stays light.
+- **Backend:** Vercel serverless functions in `/api`. **Maximum 8 functions in total** (Hobby limit is 12; keep a margin). Use a shared `_lib/` folder (not counted as a function). Planned functions: `register` (tournament sign-up), `apply` (membership and sponsor/inter-university enquiries, selected by a `type` field), `contact`, `coach` (AI coach), `config` (public live data: seats left, next event), `keepalive` (cron), plus up to two spare. Keep each under the 10-second Hobby default timeout.
+- **Replace the Express `server.ts` of the study platform.** Express does not run on Vercel the way it is written. Port the coach endpoint to `/api/coach` as a Vercel function. The Gemini key lives only in Vercel env vars. Use an env var `GEMINI_MODEL` (the old code used a model string that must be checked against the current model list; put a safe default and tell me in the README to verify it).
+- **Database:** Supabase Postgres (500 MB limit): keep content small, store images in the repo or Supabase Storage with compression, never store large blobs in tables. Use Supabase Auth (email + password, magic link, and Google as optional) for accounts. Free tier allows 50,000 monthly active users, which is far more than needed.
+- **Supabase projects pause after about 7 days of inactivity.** Add a Vercel Cron job (`vercel.json`, daily, allowed on Hobby) that calls `/api/keepalive`, which runs one trivial query. Document this, and document that exporting a CSV backup before each event is still required.
+- **Realtime:** use Supabase Realtime only for live tournament standings (one channel), to stay within free connection limits. Unsubscribe on unmount.
+- **Performance budgets:** landing page JS under 150 KB gzipped; images in WebP, lazy-loaded, with width/height set; fonts limited to Playfair Display (headings), Inter (body) and one Arabic font (Cairo or Tajawal) with `font-display: swap`; no heavy animation libraries beyond `motion`; no runtime dependency on external image CDNs.
+- **Stockfish (optional, phase 3):** only a **single-threaded WASM build self-hosted in `/public`**, lazy-loaded on the Analysis page inside a Web Worker. It must not require special COOP/COEP headers. If this would break the budget, keep the existing alpha-beta engine instead and say so.
+- No paid services. No server that must stay running. No secrets in the browser except the Supabase **anon** key and the Turnstile **site** key.
+- Note for the README: Vercel Hobby is meant for non-commercial use, which fits a student club; mention it once if sponsorship money is involved.
+
+---
+
+## 4. SITE MAP AND PAGES
+
+Public pages (all in FR / EN / AR with RTL), with SEO tags, Open Graph images (placeholder), `sitemap.xml`, `robots.txt`, a custom 404 shaped like "illegal move":
+
+1. **Home**: playable hero chessboard (section 6), short definition of the club, live "next event" card with seats-left counter and countdown, the weekly rhythm (Mon/Thu 12-14), stat counters (clubs reached, students, sessions), roadmap preview, call-to-action buttons "Join the club", "Register for the tournament", "Start learning".
+2. **About**: story since 18 October 2025, mission, principles (section 2), board, history.
+3. **Activities**: weekly sessions, beginner training, weekly inter-university online tournament, special events. A weekly calendar grid where each activity is a piece on a board.
+4. **Annual plan / Roadmap**: the 2026/27 plan as an interactive journey (section 6).
+5. **Events**: list with filters (upcoming / past / type), event detail pages, "add to calendar" (.ics), and a timeline of past events including the 30 October Chess Cinema and Halloween night.
+6. **Tournaments**: list; tournament detail page with info, rules, live registrations count, sign-up form, then, once started, rounds, pairings, results and standings (live).
+7. **Inter-University League (online)**: weekly edition page with platform link and rules, a clubs leaderboard (24 clubs and growing), weekly results archive, and a form for other clubs to register a team.
+8. **Join the club**: membership application form (name, student ID or phone, email, faculty/department, level, consent). Creates a `pending` application that the board approves.
+9. **Study Academy**: the study platform (section 8).
+10. **Members' Hall**: leaderboard by in-app rating, badges, streaks (opt-in display name only).
+11. **Gallery**: masonry grid with lightbox, filtered by event (dummy photos).
+12. **News**: short posts managed from admin.
+13. **Partners and Sponsors**: section 2.
+14. **Documents**: règlement intérieur etc.
+15. **FAQ**, **Contact** (form + email + Instagram + map link to the faculty), **Privacy**, **Legal notice**.
+
+Authenticated pages: **Account** (profile, language, progress, badges), **Admin** (section 7).
+
+Navigation: sticky header with logos, language switch (FR/EN/AR), theme switch (light/dark), a mobile bottom bar with the 4 key actions (Join, Tournament, Learn, Contact). Footer with both logos, contacts, privacy note, social link.
+
+---
+
+## 5. SIGN-UP SYSTEMS (reuse the attached sign-up project)
+
+### 5a. Tournament sign-up
+Keep the attached project's behaviour exactly, and generalise it to any tournament:
+- Flow: a visitor enters name, student ID/phone, contact, category (Open/Women), consent, passes Turnstile (+ honeypot) and presses the button "Make your move" (FR/AR equivalents as in the project).
+- Postgres function `register_player(...)` in one transaction, checking in order: invalid input, tournament closed or past deadline, already registered, tournament full, then membership. Name matching by `name_key` (lowercase, no accents, no punctuation, words sorted, Arabic letter variants normalised) with exact match or trigram similarity >= 0.6; if the member has an identifier, it must also match. Never reveal other members' names.
+- Statuses: `confirmed`, `member_unpaid`, `pending_not_member`, `already_registered`, `closed`, `full`, `invalid`.
+- Save a registration for confirmed, member_unpaid and pending_not_member. A pending player becomes eligible later when the board adds them to members (view `registration_status`).
+- Popups and copy: keep the EN / FR / AR texts from the sign-up project's `i18n.js` word for word (the "You're one move away" popup with buttons "Got it" / "Check again" / "Contact us", and the member-unpaid popup). Add the Arabic text if any is missing, in natural RTL Arabic.
+- Success screen "You're in" with summary and `.ics` download; promotion of the pawn to a queen with a short confetti.
+- Live seats-left counter and deadline countdown (via `/api/config`).
+- Per-IP rate limit, Turnstile server verification, generic errors, no stack traces.
+
+### 5b. Membership application
+- Public form creates a row in `membership_applications` (status `pending`). Admin approves (one click) which inserts into `members` through a `SECURITY DEFINER` function, or rejects. Optional email notification is NOT required (no paid email); instead show the applicant a clear confirmation and show the board a pending-count badge.
+- Duplicate protection by `name_key` + identifier.
+
+### 5c. Other enquiries
+Sponsor/partner enquiry, inter-university club registration, and contact form all go through `/api/apply` or `/api/contact` with Turnstile, honeypot, validation and rate limiting, and are stored in `contact_messages` / `applications`.
+
+---
+
+## 6. DESIGN: CHESS-THEMED AND HIGHLY INTERACTIVE
+
+### Visual system
+- Palette: chess.com green `#769656`, cream `#EEEED2`, charcoal `#262421`, gold accent `#C9A24B` for success and highlights. A full **dark theme** (charcoal board squares, cream text, gold accent). All colours as CSS variables.
+- Typography: Playfair Display for headings, Inter for body, Cairo/Tajawal for Arabic. Generous spacing, strong hierarchy, no clutter.
+- Chess motifs: subtle 8x8 board pattern backgrounds, board coordinates (a-h, 1-8) as decorative borders, squares that highlight on hover like a selected square, move-list style numbering for sections ("1. About, 2. Activities..."), captured-pieces style stat counters.
+- Pieces: **clean inline SVG** (reuse `ChessPieceSvg.tsx`), no copyrighted art.
+
+### Signature interactions (build all of these)
+1. **Playable hero board:** a real chessboard on the home page (chess.js, drag or tap-to-move) where the visitor can play against the built-in engine at an easy level, with a "Reset" and "Show me a famous game" button that auto-plays a short classic game with captions. Fully keyboard-accessible; on small phones it sits below the headline.
+2. **"Pawn to Queen" progress track:** used in every form (Details, Check, Confirmed). The pawn advances as fields are completed and promotes to a queen on success with a short sparkle.
+3. **Roadmap as a game:** the annual plan is a vertical path of squares; scrolling moves a knight along it; each stop opens a card with the event (integration day, training, championship, team tournament, simultaneous exhibition, national tournament). Past stops are filled in; the next one pulses.
+4. **Weekly rhythm board:** Monday and Thursday as two "files" with piece markers for sessions, training and the online tournament.
+5. **Knight's-tour loader** for all loading states.
+6. **Move-list navigation:** the section index on long pages is a clickable PGN-style move list.
+7. **Counters:** numbers animate like a clock ticking when scrolled into view.
+8. **Opening animation** (skippable, once per session, respects reduced motion): pieces slide onto a board and form the club name.
+9. **Custom 404:** "Illegal move" with a back-to-home button.
+10. **Gallery:** squares flip to reveal photos; lightbox with keyboard arrows.
+11. **Optional subtle sound toggle** (piece move sound on the board only), off by default.
+12. **Micro-interactions:** buttons with a short "piece slide", focused fields glow like a selected square, cards tilt slightly on hover (desktop only).
+
+### Rules
+- Mobile-first (visitors come from Instagram, WhatsApp, QR codes). Test layouts at 360 px.
+- Accessible: semantic HTML, labels, visible focus, focus-trap and Escape in all dialogs, contrast AA, `prefers-reduced-motion` disables all non-essential animation, board playable by keyboard with move announcements via `aria-live`.
+- Arabic: `dir="rtl"` on the document, mirrored layout via logical CSS properties (`margin-inline-start`, etc.). The chess board itself and algebraic notation stay LTR.
+- Language and theme saved in localStorage. French is the default.
+
+---
+
+## 7. ADMIN AREA (Supabase Auth + roles + RLS)
+
+Roles in `profiles.role`: `member`, `board`, `admin`. The first admin is promoted manually by SQL (document how). Admin routes are lazy-loaded and protected by role; all permissions are enforced by **RLS in the database**, not only in the UI.
+
+Admin features:
+- **Dashboard:** pending applications, registrations per tournament, seats left, next event, study-platform usage (active learners this week, completed lessons), latest messages.
+- **Members:** table with search, add/edit, mark fees paid, import CSV, export CSV, status (active/pending/alumni), season.
+- **Applications:** approve or reject membership, sponsor enquiries, inter-university registrations.
+- **Tournaments:** create/edit (name, date, venue, capacity, deadline, categories, rounds, time control, fee, open/closed), see registrations (confirmed / pending / unpaid), **promote a pending player** after they join, export CSV.
+- **Tournament runner (in-person Swiss):** generate round pairings with a Swiss algorithm (no repeat pairings, colour balance, bye for odd numbers), enter results, see standings with tie-breaks (Buchholz, then Sonneborn-Berger), publish to the public page in real time. Build the pairing engine as a pure, unit-tested TypeScript module. Support the Open and Women categories as separate standings. Print-friendly pairing sheets.
+- **Events, News, Gallery, Board, FAQ:** simple editors (text per language, image path from the placeholder manifest or Supabase Storage upload with automatic size limit of 1 MB and WebP conversion in the browser).
+- **Inter-University League:** manage clubs, weekly editions, results, leaderboard.
+- **Site settings:** editable constants (fee, phone visibility, stats counters, social links, announcement banner) stored in a `settings` table.
+- **Study analytics:** class-wide weak spots (mistake categories), lesson completion by week.
+- Every admin write goes through RLS policies using a `public.is_board()` helper (`SECURITY DEFINER`, fixed `search_path`).
+
+---
+
+## 8. STUDY PLATFORM ("Chess House Academy"), a full evolution of the attached `chessflow-midgame`
+
+### Keep from the existing project
+- The **8-week guided course running endgame, middlegame, opening** (29 slides with interactive boards, master-game walkthroughs, quizzes and exercises), the **Practice Lab** (8 drills, alpha-beta engine, 3 bot strengths), the **mistake analyzer** (5 categories and heatmaps), the **AI Coach** (sees the current FEN, answers in EN/FR/AR) and the present mode. Keep the chess.com-green board style.
+- Move `formationSlides.ts` content into per-week **JSON modules** loaded on demand (the current file is about 82 KB). Keep the same content and structure; do not lose any slide.
+
+### Replace or add
+1. **Accounts and cloud sync:** progress stored in Supabase per user (RLS: each user can only read and write their own rows). Guests can try lessons using localStorage; on login, **migrate their localStorage progress** into the account.
+2. **Mastery levels** per topic (Seen, Practiced, Solid, Mastered); the next week unlocks when the current one reaches "Solid", with a "skip with placement test" option.
+3. **Spaced repetition:** every missed quiz question, failed exercise and recorded mistake becomes a card (FEN + solution) that returns at 1, 3, 7 and 21 days (SM-2-style scheduling stored in `srs_cards`). A "Fix your mistakes" daily session.
+4. **Daily 10-minute plan:** one review set, one new lesson, one drill, with a streak counter and badges.
+5. **Tactics trainer:** puzzles by motif (pin, fork, skewer, back-rank, discovered attack, etc.), with difficulty ratings. Seed 100+ puzzles; **every puzzle's FEN and solution must be validated by a script using chess.js before seeding** (the script fails the build if a solution is illegal).
+6. **Guess-the-move** master games, scored.
+7. **Endgame mode** that tells the learner "winning / drawing / losing" using the engine (tablebase-style feedback for the simple endgames of weeks 1-3).
+8. **Game review:** paste a PGN, get accuracy, critical moments and mistakes mapped to the 5 categories.
+9. **Weakness radar chart** (endgames, tactics, structure, openings) that recommends the exact lesson to revisit.
+10. **AI Coach upgrades:** runs through `/api/coach`; requires login; **per-user rate limit stored in the DB** (not only per IP; for example 30 requests per user per day, a `coach_usage` table); sends the engine's evaluation and best move **with the FEN** so the model explains facts instead of guessing; a Socratic mode toggle; an "Explain my mistake" button from the heatmap; answers in the user's chosen language.
+11. **Engine in a Web Worker** so deeper search does not freeze the UI.
+12. **Glossary** (zugzwang, outpost, opposition, etc.) linked from lessons; **cheat-sheet PDF** per week (generated client-side).
+13. **Certificates** when a learner completes a level (client-side PDF or image with the club logo).
+14. **Instructor view** (inside Admin): who finished which week, class-wide weak spots, and the ability to set "this week's assignment" (shown on the learner's home).
+15. **Study session sync with the Monday training:** a "Today's session" card showing which week the club is teaching, controlled from Admin.
+16. Study pages are PWA-friendly: cache lesson JSON and the engine for **offline use** (service worker, kept small).
+
+### Training programme facts to reflect in the course page
+- Order: Session 1 endgames, Session 2 middlegame (tactics and principles), Session 3 opening. Present the course map as a board journey from "Endgames" to "Openings".
+
+---
+
+## 9. DATABASE (write ordered SQL migrations in `/supabase/migrations`, plus seeds)
+
+Extensions: `unaccent`, `pg_trgm`, `pgcrypto`. Reuse `normalize_name`, `normalize_id`, `set_name_key` from the sign-up project.
+
+Tables (all with `created_at`, all with **Row Level Security enabled**):
+- **Identity:** `profiles` (id = auth user id, display_name, role, member_id nullable, language, show_on_leaderboard).
+- **Club:** `members` (full_name, name_key, identifier, email, phone, department, status, fees_paid, season), `membership_applications`, `board_members` (season, role, person name, order, photo slot), `settings` (key, value jsonb).
+- **Tournaments:** `tournaments` (slug, type `in_person` | `online_interuni`, name i18n, event_date, venue, capacity, deadline, is_open, rounds, time_control, categories, fee, status), `registrations` (unique on tournament_id + name_key, category open/women, status, consent, contact), `rounds`, `games` (board, white/black registration, result `1-0` `0-1` `1/2-1/2` `bye` `forfeit`), view `registration_status`, view `standings` (computed).
+- **Public content:** `events`, `news_posts`, `gallery_items`, `faq_items`, `documents`, `partners` (all with i18n jsonb text fields: `{fr, en, ar}`), `clubs`, `interuni_editions`, `interuni_results`.
+- **Messages:** `contact_messages`, `applications` (sponsor/club enquiries).
+- **Study:** `study_progress`, `drill_attempts`, `mistakes`, `srs_cards`, `puzzle_attempts`, `badges`, `coach_usage`.
+
+RLS policy principles:
+- `members`, `registrations`, `membership_applications`, `contact_messages`, `applications`: **no public policies**. The browser can never read them. Writes from the public go only through the service-role API functions. Board/admin read and write through `is_board()` / `is_admin()` policies.
+- Public content tables (`events`, `news_posts`, `gallery_items`, `faq_items`, `documents`, `partners`, `board_members`, standings views, `settings` public keys): **public read of published rows only**; write for board/admin.
+- Study tables: owner-only (`auth.uid() = user_id`); board/admin can read aggregated views for the instructor dashboard (create aggregate views so individual mistakes are not exposed unless needed).
+- Add indexes for every foreign key and every column used in filters.
+
+Provide: `seed.sql` (the 30 November tournament, board 2026/27 and 2025/26, events, FAQ, dummy gallery rows, 5 sample members, the 100+ validated puzzles), `sample_members.csv`, a CSV import instruction (Supabase dashboard or a Node script), and an `organiser.sql` with ready-made queries (list confirmed, list pending, export, promote a pending player, set a user as admin).
+
+---
+
+## 10. SECURITY AND PRIVACY
+
+- Service-role key only in Vercel env vars; never in the browser or the repo. Env vars: `SUPABASE_URL`, `SUPABASE_ANON_KEY` (public), `SUPABASE_SERVICE_ROLE_KEY`, `TURNSTILE_SITE_KEY` (public), `TURNSTILE_SECRET_KEY`, `GEMINI_API_KEY`, `GEMINI_MODEL`, `CRON_SECRET`, `SHOW_PERSONAL_CONTACT`. Provide `.env.example`.
+- Every public form: Turnstile verified server-side, honeypot, trimmed and length-limited inputs, server-side validation, parameterised queries, per-IP rate limit, generic error messages, no personal data in logs.
+- Security headers in `vercel.json` (CSP allowing only Turnstile, Google Fonts and Supabase, `X-Content-Type-Options`, `Referrer-Policy`, `frame-ancestors 'none'`).
+- Collect the minimum personal data; consent checkbox on every form that stores data; Privacy page in FR/EN/AR explaining what is stored, why, for how long, and how to ask for deletion (by email).
+- Admin actions require a valid session AND a role checked by RLS. The keepalive/cron endpoint checks `CRON_SECRET`.
+- Learners' study data is private to them; the leaderboard shows only opted-in display names.
+
+---
+
+## 11. TESTING AND QUALITY
+
+Deliver tests and a manual checklist:
+- **Unit tests:** `normalize_name`, Swiss pairing engine (no repeat pairings, bye handling, colour balance), SRS scheduler, mistake analyzer, puzzle validation script.
+- **SQL tests** (reuse `test_register.sql`): exact name, reversed order, accented name, typo, non-member, duplicate, full, closed, member_unpaid, RLS check that the anon role cannot select from `members`, `registrations`, `applications`.
+- **Manual checklist:** each sign-up status, bot (honeypot filled), failed Turnstile, RTL Arabic on a 360 px phone, keyboard-only use of the board and dialogs, dark theme, reduced motion, offline study mode, admin role enforcement (a normal user cannot open admin data even by calling the API directly).
+- Lighthouse targets on the home page: Performance >= 90 mobile, Accessibility >= 95, SEO >= 95.
+- `npm run lint`, `npm run test`, `npm run build` must pass.
+
+---
+
+## 12. KNOWN ISSUES IN THE ATTACHED CODE TO FIX WHILE PORTING
+
+- The study platform uses an Express `server.ts`: convert to Vercel functions (section 3).
+- The coach's rate limit is per IP, in memory (resets on every serverless cold start): replace with DB-backed per-user limits.
+- Check the Gemini model string in the old server code; move it to an env var.
+- `PracticeLab` (about 53 KB) and `SlideCanvas` (about 33 KB) are too large: split into smaller components and lazy-load.
+- Progress is only in localStorage: migrate to Supabase with guest fallback.
+- Weeks 5, 7 and 8 have thin practice material: add at least 3 extra exercises each (validated with chess.js).
+- The sign-up app was tested at database level but not on live accounts: include a clear "first live test" section in the README.
+
+---
+
+## 13. DELIVERABLES
+
+1. The **complete project** (file tree + all code): `src/` (pages, components, hooks, data, i18n, config), `api/`, `supabase/migrations`, `supabase/seed.sql`, `public/` (assets, placeholders, docs, favicon, manifest, service worker), `vercel.json` (routes, headers, cron), `.env.example`.
+2. `src/data/images.ts` listing every placeholder image slot with recommended size and alt text in 3 languages, so I can replace them with real photos of our activities.
+3. i18n files for FR / EN / AR covering **every** string on every page.
+4. A **README** with exact manual steps, in this order: create the Supabase project; run the migrations and seed; promote the first admin; import the member CSV; create the Turnstile keys; get the Gemini key; set the Vercel env vars; push to Git and deploy on Vercel; add the custom domain (optional); set the Supabase Auth redirect URLs; first live test.
+5. A **"Things to confirm" list** collecting every `TODO-CONFIRM`: integration day date, entry fee, Thursday format, Chess Cinema title, registration deadline, phone visibility, Open/Women categories, room details.
+6. An **organiser guide** (one page): list confirmed/pending players, export CSV, promote a pending player, run Swiss rounds, publish results, edit the site from Admin.
+7. A **free-tier notes** section: Supabase pause and the keepalive cron, 500 MB database limit, Vercel function limits, backup/export before every event.
+
+---
+
+## 14. BUILD ORDER (work in these phases, and make each phase deployable)
+
+- **Phase 1, foundation:** repo, design system, i18n and RTL, layout, Home, About, Activities, Roadmap, Events, Contact, Gallery with placeholders, Supabase schema, RLS, tournament sign-up and membership application working end to end.
+- **Phase 2, tournaments and admin:** auth, roles, Admin (members, applications, tournaments, registrations, content editors), Swiss runner with live standings, Inter-University League pages.
+- **Phase 3, study platform:** port slides, Practice Lab, mistake analyzer and coach; cloud progress; mastery; spaced repetition; daily plan; tactics trainer; game review; offline mode; optional Stockfish.
+- **Phase 4, polish:** animations, sound toggle, SEO, accessibility pass, Lighthouse, tests, README.
+
+---
+
+## 15. ACCEPTANCE CRITERIA
+
+- A member's name in any word order, with or without accents, returns "confirmed" and stores a confirmed registration; a non-member sees the friendly popup and a pending registration is stored; an unpaid member sees the fee popup.
+- The browser can never read `members`, `registrations` or any application/message table, and never receives the service-role key (verify with the anon key).
+- The site works on a phone in French, English and right-to-left Arabic, in light and dark themes.
+- The home page has a playable chessboard; the roadmap, forms and 404 page use the chess interactions listed in section 6.
+- A board member can run a 9-round Swiss tournament from Admin and the public page updates live.
+- A learner can sign up, study a lesson, miss a quiz question, and see that position return as a spaced-repetition card the next day; progress survives a change of device.
+- The whole project deploys from one repo to Vercel free with the Supabase free tier, uses at most 8 serverless functions, and survives a week of inactivity thanks to the keepalive cron.
+- Every image on the site is either a labelled dummy placeholder listed in `src/data/images.ts` or one of my two real logos.

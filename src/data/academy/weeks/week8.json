@@ -1,0 +1,160 @@
+{
+  "weekNumber": 8,
+  "phase": "opening",
+  "title": {
+    "fr": "Semaine 8 : Répertoire complet & Transition vers le milieu de jeu",
+    "en": "Week 8: Practical Repertoire & Opening-to-Middlegame Transition",
+    "ar": "الأسبوع 8: الذخيرة العملية والانتقال إلى وسط اللعب"
+  },
+  "summary": {
+    "fr": "Relier la sortie d’ouverture aux idées de finales et de milieu de jeu vues pendant les semaines 1 à 6.",
+    "en": "Connect opening setups directly to the middlegame and endgame themes learned in Weeks 1–6.",
+    "ar": "ربط الافتتاحية بأفكار وسط اللعب والنهايات التي تعلمتها في الأسابيع الستة الأولى."
+  },
+  "keyTakeaways": [
+    {
+      "fr": "Ne jouez pas une ouverture sans connaître le plan de milieu de jeu qui suit.",
+      "en": "Never play an opening line without knowing the middlegame plan it leads into.",
+      "ar": "لا تلعب افتتاحية دون معرفة خطة وسط اللعب التي تليها."
+    },
+    {
+      "fr": "Une fois le développement achevé, connectez vos Tours sur la première rangée.",
+      "en": "Finish development by connecting your Rooks on the back rank.",
+      "ar": "أكمل النشر بربط القلعتين على الصف الأول."
+    }
+  ],
+  "slides": [
+    {
+      "id": "w8-s1",
+      "title": {
+        "fr": "L’Italienne : viser f7 et contrôler d5",
+        "en": "Italian Game: Eyeing f7 & Controlling d5",
+        "ar": "الافتتاحية الإيطالية: استهداف f7 والسيطرة على d5"
+      },
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "body": {
+        "fr": "La Partie Italienne (3.Bc4) respecte toutes les règles d’or : le Fou vise la case la plus fragile f7 et prépare c3-d4 pour dominer le centre.",
+        "en": "The Italian Game (3.Bc4) obeys every golden rule: the Bishop eyes the fragile f7 square and prepares c3-d4 to seize the center.",
+        "ar": "الافتتاحية الإيطالية (3.Bc4) تحترم جميع القواعد: الفيل يستهدف أضعف مربع f7 ويحضّر c3-d4."
+      },
+      "keyIdea": {
+        "fr": "Bc4 place le Fou sur la grande diagonale la plus active.",
+        "en": "Bc4 places the Bishop on its most natural attacking diagonal.",
+        "ar": "Bc4 يضع الفيل على أنشط قطر هجومي."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Jouez le coup de la Partie Italienne avec votre Fou roi.",
+          "en": "Play the Italian Game move with your Kingside Bishop.",
+          "ar": "العب نقلة الافتتاحية الإيطالية بفيل الملك."
+        },
+        "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+        "solutionSan": "Bc4",
+        "hint": {
+          "fr": "Sortez le Fou f1 en c4.",
+          "en": "Move the f1 Bishop to c4.",
+          "ar": "انقل الفيل من f1 إلى c4."
+        }
+      }
+    },
+    {
+      "id": "w8-s2",
+      "title": {
+        "fr": "Punir l’erreur classique de développement (Coup du Berger / contre)",
+        "en": "Refuting Trap Attempts with Development",
+        "ar": "دحض محاولات الفخاخ بالنشر السليم"
+      },
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+      "body": {
+        "fr": "Face à une tentative de coup du berger, ne jouez jamais Cf6?? (car Dxf7#), mais g6! qui bloque f7 et attaque la Dame.",
+        "en": "Facing Scholar's Mate threats, never rush Nf6?? (allowing Qxf7#). Play g6 to defend f7 and drive the Queen away!",
+        "ar": "أمام محاولة كش مات السريع، تجنب Nf6?? والعب g6 لحماية f7 وطرد الوزيرة."
+      },
+      "keyIdea": {
+        "fr": "Défendez d’abord la menace directe tout en chassant la pièce imprudente.",
+        "en": "Parry the direct mate threat while gaining time on the Queen.",
+        "ar": "ادفع التهديد المباشر مع كسب الوقت بمطاردة الوزيرة."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Avec les Noirs, parez le mat en f7 tout en attaquant la Dame h5 !",
+          "en": "As Black, stop mate on f7 while attacking the White Queen!",
+          "ar": "بالأسود، امنع الكش مات في f7 وهاجم الوزيرة البيضاء!"
+        },
+        "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+        "solutionSan": "g6",
+        "hint": {
+          "fr": "Poussez le pion g7 d’une case en g6.",
+          "en": "Push the g-pawn one square to g6.",
+          "ar": "ادفع البيدق g خطوة واحدة إلى g6."
+        }
+      }
+    },
+    {
+      "id": "w8-s3",
+      "title": {
+        "fr": "Connecter les Tours : fin de l’ouverture",
+        "en": "Connecting the Rooks: Transition to Middlegame",
+        "ar": "ربط القلعتين: نهاية الافتتاحية"
+      },
+      "fen": "r2q1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQR1K1 w - - 0 8",
+      "body": {
+        "fr": "Lorsque votre Fou c1 et votre Dame se sont développés, vos deux Tours communiquent sur la première rangée : l’ouverture est officiellement réussie.",
+        "en": "Once your c1 Bishop and Queen step out, your Rooks connect on the back rank — your opening phase is complete.",
+        "ar": "عندما يخرج الفيل والوزيرة وتتصل القلعتان على الصف الأول، تكون قد أنهيت الافتتاحية بنجاح."
+      },
+      "keyIdea": {
+        "fr": "Développez votre dernière pièce légère (le Fou c1) avec une menace ou un clouage.",
+        "en": "Develop your last minor piece (c1 Bishop) with an active pin.",
+        "ar": "طوّر آخر قطعة خفيفة (الفيل c1) مع تثبيت نشط."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Développez le Fou c1 en clouant le Cavalier f6 sur la Dame d8 !",
+          "en": "Develop the c1 Bishop by pinning the f6 Knight to the Queen!",
+          "ar": "انشر الفيل c1 بتثبيت الحصان f6 أمام الوزيرة!"
+        },
+        "fen": "r2q1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQR1K1 w - - 0 8",
+        "solutionSan": "Bg5",
+        "hint": {
+          "fr": "Placez le Fou en g5.",
+          "en": "Play Bg5.",
+          "ar": "العب الفيل إلى g5."
+        }
+      }
+    },
+    {
+      "id": "w8-s4",
+      "title": {
+        "fr": "Frapper au centre (d4) dès que possible",
+        "en": "Striking in the Center with d4",
+        "ar": "الضرب في المركز عبر d4"
+      },
+      "fen": "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - - 0 7",
+      "body": {
+        "fr": "Une fois le pion c3 en place et le Roi en sécurité, la poussée d4 ouvre les lignes pour vos Fous et vos Tours.",
+        "en": "Once c3 supports it and your King is castled, pushing d4 opens lines for your Bishops and Rooks.",
+        "ar": "بعد دعم المربع بـ c3 وتأمين الملك، يفتح الدفع d4 الخطوط أمام أفيالك وقلاعك."
+      },
+      "keyIdea": {
+        "fr": "Ouvrez le centre lorsque votre Roi est déjà roqué et que celui de l’adversaire ne l’est pas encore (ou avant qu’il ne se consolide).",
+        "en": "Break open the center once your pieces are developed and King is castled.",
+        "ar": "افتح المركز بعد إتمام النشر وتأمين ملكك."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Ouvrez le centre avec la poussée préparée par c3 !",
+          "en": "Break in the center with the pawn push prepared by c3!",
+          "ar": "افتح المركز بدفع البيدق المحضّر عبر c3!"
+        },
+        "fen": "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - - 0 7",
+        "solutionSan": "d4",
+        "hint": {
+          "fr": "Avancez le pion d3 en d4.",
+          "en": "Push the d3 pawn to d4.",
+          "ar": "ادفع البيدق d3 إلى d4."
+        }
+      }
+    }
+  ]
+}

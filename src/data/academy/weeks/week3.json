@@ -1,0 +1,118 @@
+{
+  "weekNumber": 3,
+  "phase": "endgame",
+  "title": {
+    "fr": "Semaine 3 : Finales de Tours (Lucena & Philidor)",
+    "en": "Week 3: Rook Endgames (Lucena & Philidor)",
+    "ar": "الأسبوع 3: نهايات القلاع (لوسينا وفيليدور)"
+  },
+  "summary": {
+    "fr": "Les deux positions fondamentales des finales de Tours, les plus fréquentes en tournoi.",
+    "en": "The two essential Rook endgame techniques that decide more tournament games than any other.",
+    "ar": "الموضعان الأساسيان في نهايات القلاع الأكثر تكراراً في البطولات."
+  },
+  "keyTakeaways": [
+    {
+      "fr": "Position de Lucena : construisez le pont avec votre Tour pour bloquer les échecs adverses.",
+      "en": "Lucena position: build a bridge with your Rook to shield your King from vertical checks.",
+      "ar": "وضعية لوسينا: ابنِ جسراً بالقلعة لحماية ملكك من الكشات العمودية."
+    },
+    {
+      "fr": "Position de Philidor : maintenez votre Tour sur la 3e/6e rangée jusqu’à ce que le pion avance.",
+      "en": "Philidor defence: hold the 3rd/6th rank with your Rook until the pawn advances, then check from behind.",
+      "ar": "دفاع فيليدور: حافظ على الصف السادس بقلعتك حتى يتقدم البيدق، ثم هاجم من الخلف."
+    }
+  ],
+  "slides": [
+    {
+      "id": "w3-s1",
+      "title": {
+        "fr": "Principe : la Tour derrière le pion passé",
+        "en": "Tarrasch Rule: Rook Behind the Passed Pawn",
+        "ar": "قاعدة تاراش: القلعة خلف البيدق السالك"
+      },
+      "fen": "6k1/8/8/4P3/8/8/4R3/6K1 w - - 0 1",
+      "body": {
+        "fr": "En attaque comme en défense, une Tour est presque toujours plus active derrière un pion passé que devant : à mesure que le pion avance, la portée de la Tour grandit.",
+        "en": "In both attack and defence, a Rook belongs behind a passed pawn: as the pawn advances, the Rook's scope grows rather than shrinks.",
+        "ar": "في الهجوم والدفاع، تكون القلعة أقوى خلف البيدق السالك؛ كلما تقدم البيدق زاد مدى القلعة."
+      },
+      "keyIdea": {
+        "fr": "Ne bloquez pas votre propre pion avec votre Tour si vous pouvez l’éviter.",
+        "en": "Avoid placing your own Rook in front of your passed pawn.",
+        "ar": "تجنب وضع قلعتك أمام بيدقك السالك."
+      },
+      "highlights": ["e2", "e5", "e8"]
+    },
+    {
+      "id": "w3-s2",
+      "title": {
+        "fr": "Position de Lucena — Le Pont",
+        "en": "The Lucena Position — Building the Bridge",
+        "ar": "وضعية لوسينا — بناء الجسر"
+      },
+      "fen": "3K4/3P1k2/8/8/8/8/4R3/2r5 w - - 0 1",
+      "body": {
+        "fr": "Votre pion est sur la 7e rangée et votre Roi est devant lui, mais votre propre Roi bloque la promotion. Sortez le Roi, puis placez votre Tour sur la 4e rangée pour couper les échecs par derrière.",
+        "en": "Your pawn sits on the 7th rank with your King blocking it. First check the enemy King away if needed, then lift your Rook to the 4th rank so it can shield your King from checks.",
+        "ar": "بيدقك في الصف السابع وملكك أمامه. أخرج الملك ثم ارفع القلعة إلى الصف الرابع لبناء جسر يحميك من كشات القلعة المعادية."
+      },
+      "keyIdea": {
+        "fr": "Tour à la 4e rangée = bouclier prêt à bloquer l’échec final.",
+        "en": "Rook to the 4th rank = bridge ready to block the final check.",
+        "ar": "القلعة في الصف الرابع = جسر جاهز لصد الكش الأخير."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Premier coup gagnant de Lucena : éloignez d’abord le Roi noir de la colonne d/e.",
+          "en": "First winning move in Lucena: push the Black King one file further away.",
+          "ar": "أول نقلة رابحة في لوسينا: أبعد الملك الأسود عموداً إضافياً."
+        },
+        "fen": "3K4/3P1k2/8/8/8/8/4R3/2r5 w - - 0 1",
+        "solutionSan": "Rf2+",
+        "hint": {
+          "fr": "Donnez échec avec la Tour blanche sur la colonne f !",
+          "en": "Check the Black King on the f-file!",
+          "ar": "اعطِ كشاً بالقلعة البيضاء على العمود f!"
+        }
+      }
+    },
+    {
+      "id": "w3-s3",
+      "title": {
+        "fr": "Défense de Philidor",
+        "en": "The Philidor Defence",
+        "ar": "دفاع فيليدور"
+      },
+      "fen": "4k3/8/R7/4P3/4K3/8/8/4r3 b - - 0 1",
+      "body": {
+        "fr": "Pour annuler avec un pion de moins, gardez la Tour sur votre 3e rangée (la 6e vue des Blancs) pour empêcher le Roi attaquant d’avancer. Dès que le pion avance sur cette rangée, passez la Tour tout en bas pour attaquer le Roi par derrière.",
+        "en": "To draw down a pawn, hold the 6th rank with your Rook to deny the enemy King shelter. The moment the pawn steps onto that rank, drop your Rook to the back rank to check from behind.",
+        "ar": "للتعادل ببيدق أقل، احرس الصف السادس بقلعتك لمنع تقدم الملك. وعندما يتقدم البيدق لذلك الصف، انزل بالقلعة للخلف لشن كشات متواصلة."
+      },
+      "keyIdea": {
+        "fr": "Pas d’abri devant le Roi = nulle par échecs perpétuels par derrière.",
+        "en": "No pawn shelter = perpetual checks from behind.",
+        "ar": "انعدام الغطاء أمام الملك = تعادل بالكشات المستمرة من الخلف."
+      },
+      "quiz": {
+        "question": {
+          "fr": "Quand la Tour défensive doit-elle quitter la 3e/6e rangée dans la défense de Philidor ?",
+          "en": "When should the defending Rook leave the 3rd/6th rank in the Philidor defence?",
+          "ar": "متى تغادر القلعة المدافعة الصف السادس في دفاع فيليدور؟"
+        },
+        "options": [
+          { "fr": "Juste après que l’attaquant a poussé son pion sur cette rangée", "en": "Right after the attacker pushes the pawn onto that rank", "ar": "مباشرة بعد تقدم البيدق إلى ذلك الصف" },
+          { "fr": "Dès le tout premier coup de la finale", "en": "On the very first move of the endgame", "ar": "منذ النقلة الأولى في النهاية" },
+          { "fr": "Jamais, elle reste passive sur la colonne a", "en": "Never, it stays passive on the a-file", "ar": "أبداً، تبقى ساكنة في العمود a" }
+        ],
+        "correctIndex": 0,
+        "explanation": {
+          "fr": "Une fois le pion avancé, le Roi attaquant n’a plus de case devant lui pour se cacher des échecs par derrière.",
+          "en": "Once the pawn advances, the attacking King loses its shield against checks from the rear.",
+          "ar": "بمجرد تقدم البيدق يفقد الملك المهاجم المظلة التي تحميه من الكشات الخلفية."
+        }
+      }
+    }
+  ]
+}

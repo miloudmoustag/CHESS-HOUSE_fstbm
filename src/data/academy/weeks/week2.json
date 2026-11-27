@@ -1,0 +1,131 @@
+{
+  "weekNumber": 2,
+  "phase": "endgame",
+  "title": {
+    "fr": "Semaine 2 : Finales de Pions & Opposition",
+    "en": "Week 2: Pawn Endgames & Opposition",
+    "ar": "الأسبوع 2: نهايات البيادق والتقابل"
+  },
+  "summary": {
+    "fr": "La règle du carré, les cases clés devant un pion passé et l’art de prendre l’opposition.",
+    "en": "The rule of the square, key squares ahead of a passed pawn, and seizing opposition.",
+    "ar": "قاعدة المربع، المربعات الحاسمة أمام البيدق السالك، وفن أخذ التقابل."
+  },
+  "keyTakeaways": [
+    {
+      "fr": "Placez toujours votre Roi devant votre pion pour lui ouvrir la voie vers la promotion.",
+      "en": "Always march your King in front of your pawn to clear its path to promotion.",
+      "ar": "ضع ملكك دائماً أمام بيدقك ليفتح له الطريق نحو الترقية."
+    },
+    {
+      "fr": "La règle du carré indique immédiatement si un Roi seul peut rattraper un pion passé.",
+      "en": "The rule of the square tells you instantly if a lone King can catch a passed pawn.",
+      "ar": "قاعدة المربع تحدد فوراً ما إذا كان الملك الوحيد يستطيع اللحاق بالبيدق السالك."
+    }
+  ],
+  "slides": [
+    {
+      "id": "w2-s1",
+      "title": {
+        "fr": "La règle du carré",
+        "en": "The Rule of the Square",
+        "ar": "قاعدة المربع"
+      },
+      "fen": "8/8/8/8/P6k/8/8/4K3 w - - 0 1",
+      "body": {
+        "fr": "Tracez mentalement un carré depuis la case du pion jusqu’à la 8e rangée. Si le Roi défenseur peut entrer dans ce carré à son tour de jouer, il rattrape le pion.",
+        "en": "Draw a mental square from the pawn to the 8th rank. If the defending King can step inside that square on its turn, it catches the pawn.",
+        "ar": "ارسم ذهنياً مربعاً من البيدق إلى الصف الثامن. إذا استطاع الملك المدافع دخول المربع في دوره فسيلحق بالبيدق."
+      },
+      "keyIdea": {
+        "fr": "Pousser le pion rétrécit le carré instantanément.",
+        "en": "Pushing the pawn shrinks the square immediately.",
+        "ar": "دفع البيدق يصغّر المربع فوراً."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Jouez le seul coup blanc qui garantit la course du pion a4 (le Roi noir est trop loin après le coup).",
+          "en": "Play the move that starts the unstoppable pawn race for White.",
+          "ar": "العب النقلة التي تحسم سباق البيدق الأبيض نحو الترقية."
+        },
+        "fen": "8/8/8/8/P6k/8/8/4K3 w - - 0 1",
+        "solutionSan": "a5",
+        "hint": {
+          "fr": "Avancez le pion passé le plus vite possible.",
+          "en": "Push the passed a-pawn forward.",
+          "ar": "ادفع البيدق السالك في العمود a للأمام."
+        }
+      }
+    },
+    {
+      "id": "w2-s2",
+      "title": {
+        "fr": "L’opposition directe",
+        "en": "Direct Opposition",
+        "ar": "التقابل المباشر"
+      },
+      "fen": "4k3/8/4K3/4P3/8/8/8/8 w - - 0 1",
+      "body": {
+        "fr": "Lorsque les deux Rois se font face séparés par une seule case, celui qui n’a pas le trait possède l’opposition : l’autre Roi doit céder le passage.",
+        "en": "When two Kings face each other one square apart, the side NOT to move holds the opposition and forces the other King aside.",
+        "ar": "عندما يتواجه الملكان بفاصل مربع واحد، فإن الطرف الذي ليس عليه الدور يمتلك التقابل ويجبر الخصم على التراجع."
+      },
+      "keyIdea": {
+        "fr": "Sur la 6e rangée avec votre Roi devant le pion, vous gagnez quel que soit le trait.",
+        "en": "With your King on the 6th rank in front of the pawn, you win regardless of whose turn it is.",
+        "ar": "إذا وصل ملكك للصف السادس أمام البيدق فإنك تفوز أياً كان صاحب الدور."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Comment les Blancs forcent-ils le passage sur la 7e rangée ? (Attention, ne poussez pas le pion tout de suite !)",
+          "en": "How do White's pieces break through? (Do not push the pawn prematurely!)",
+          "ar": "كيف يفتح الأبيض الطريق؟ (تجنب دفع البيدق مبكراً!)"
+        },
+        "fen": "4k3/8/4K3/4P3/8/8/8/8 w - - 0 1",
+        "solutionSan": "Kd6",
+        "hint": {
+          "fr": "Décalez le Roi en d6 ou f6 pour contourner le Roi noir.",
+          "en": "Outflank with Kd6 (or Kf6) to control the promotion square.",
+          "ar": "حرك الملك إلى d6 للالتفاف حول الملك الأسود."
+        }
+      }
+    },
+    {
+      "id": "w2-s3",
+      "title": {
+        "fr": "Les pions de la bande (a et h)",
+        "en": "Rook Pawns (a- and h-files)",
+        "ar": "بيادق الحافة (العمودين a و h)"
+      },
+      "fen": "7k/8/6K1/7P/8/8/8/8 w - - 0 1",
+      "body": {
+        "fr": "Un pion de Tour (a ou h) fait souvent match nul si le Roi défenseur atteint le coin de promotion : l’attaquant ne peut plus contourner sans faire pat.",
+        "en": "A rook pawn often draws if the defending King reaches the corner square: the attacker cannot outflank without causing stalemate.",
+        "ar": "بيدق القلعة غالباً ما ينتهي بالتعادل إذا وصل الملك المدافع إلى زاوية الترقية."
+      },
+      "keyIdea": {
+        "fr": "En défense, courez vers le coin devant un pion a ou h.",
+        "en": "When defending against an a- or h-pawn, sprint to the corner.",
+        "ar": "عند الدفاع ضد بيدق العمود a أو h، أسرع نحو مربع الزاوية."
+      },
+      "quiz": {
+        "question": {
+          "fr": "Si le Roi noir est déjà en h8 devant un pion h blanc, quel est le résultat théorique ?",
+          "en": "If the Black King already sits on h8 in front of a White h-pawn, what is the theoretical result?",
+          "ar": "إذا كان الملك الأسود في h8 أمام بيدق أبيض في العمود h، ما هي النتيجة النظرية؟"
+        },
+        "options": [
+          { "fr": "Nulle théorique (pat ou répétition)", "en": "Theoretical draw (stalemate or repetition)", "ar": "تعادل نظري (خنق أو تكرار)" },
+          { "fr": "Gain forcé pour les Blancs", "en": "Forced win for White", "ar": "فوز مضمون للأبيض" },
+          { "fr": "Gain pour les Noirs", "en": "Win for Black", "ar": "فوز للأسود" }
+        ],
+        "correctIndex": 0,
+        "explanation": {
+          "fr": "Le Roi noir reste entre g8 et h8 : les Blancs ne peuvent jamais le déloger sans provoquer le pat.",
+          "en": "Black simply shuttles between g8 and h8; White cannot force the King out without stalemate.",
+          "ar": "يتنقل الملك الأسود بين g8 وh8، ولا يستطيع الأبيض إخراجه دون الوقوع في التعادل بالخنق."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Chess House Club — FST Béni Mellal",
+  "description": "Official website, tournament registration, Swiss manager, and Chess House Academy study platform for Chess House Club at FST Béni Mellal, Université Sultan Moulay Slimane.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

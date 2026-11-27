@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect width="120" height="120" rx="18" fill="#1B365D"/>
+  <rect x="8" y="8" width="104" height="104" rx="12" fill="none" stroke="#C9A24B" stroke-width="2"/>
+  <circle cx="60" cy="44" r="20" fill="none" stroke="#EEEED2" stroke-width="2.5"/>
+  <path d="M48 44H72M60 32V56" stroke="#C9A24B" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="60" y="83" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="16" fill="#FFFFFF" letter-spacing="2">FST BM</text>
+  <text x="60" y="98" text-anchor="middle" font-family="sans-serif" font-weight="600" font-size="7.5" fill="#C9A24B" letter-spacing="1">USMS · BÉNI MELLAL</text>
+</svg>

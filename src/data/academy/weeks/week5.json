@@ -1,0 +1,160 @@
+{
+  "weekNumber": 5,
+  "phase": "middlegame",
+  "title": {
+    "fr": "Semaine 5 : Plans de milieu de jeu, Avant-postes & Colonnes ouvertes",
+    "en": "Week 5: Middlegame Planning, Outposts & Open Files",
+    "ar": "الأسبوع 5: خطط وسط اللعب، النقاط المتقدمة والأعمدة المفتوحة"
+  },
+  "summary": {
+    "fr": "Lire la structure de pions, placer un Cavalier sur un avant-poste et contrôler les colonnes ouvertes.",
+    "en": "Read pawn structures, anchor Knights on outposts, and double Rooks on open files.",
+    "ar": "قراءة بنية البيادق، تثبيت الأحصنة في نقاط متقدمة، ومضاعفة القلاع على الأعمدة المفتوحة."
+  },
+  "keyTakeaways": [
+    {
+      "fr": "Un avant-poste est une case avancée protégée par un pion et impossible à chasser par un pion adverse.",
+      "en": "An outpost is an advanced square protected by a pawn that cannot be attacked by enemy pawns.",
+      "ar": "النقطة المتقدمة مربع محمي ببيدق ولا تستطيع بيادق الخصم طرد القطعة منه."
+    },
+    {
+      "fr": "Améliorez votre pièce la moins active avant de lancer une attaque.",
+      "en": "Improve your worst-placed piece before launching a direct attack.",
+      "ar": "حسّن موضع أضعف قطعة لديك قبل بدء الهجوم."
+    }
+  ],
+  "slides": [
+    {
+      "id": "w5-s1",
+      "title": {
+        "fr": "Installer un Cavalier sur avant-poste",
+        "en": "Anchoring a Knight on an Outpost",
+        "ar": "تثبيت الحصان في نقطة متقدمة"
+      },
+      "fen": "r2q1rk1/pp2bppp/2p5/3pP3/3P4/2N2N2/PP3PPP/R2Q1RK1 w - - 0 1",
+      "body": {
+        "fr": "Un Cavalier bien soutenu en d4, e5 ou d6 rayonne sur tout le camp adverse. Repérez les trous dans la structure de pions ennemie.",
+        "en": "A Knight supported on d4, e5, or d6 radiates influence across the enemy camp. Look for holes in the opponent's pawn chain.",
+        "ar": "الحصان المدعوم في d4 أو e5 يؤثر على كامل معسكر الخصم. ابحث عن الثغرات في سلسلة بيادق الخصم."
+      },
+      "keyIdea": {
+        "fr": "Les pions c6 et e6 absents laissent d5 ou d6 vulnérables : visez ces cases.",
+        "en": "Missing enemy pawns create permanent outposts for your minor pieces.",
+        "ar": "غياب بيادق الخصم المجاورة يخلق نقاطاً متقدمة دائمة لقطعك."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Centralisez votre Cavalier c3 vers a4 ou e2? Non, vérifiez la case forte : placez la Tour en c1 pour préparer l’occupation d’une colonne, ou jouez Ne2 pour viser f4!",
+          "en": "Improve the Rook onto the half-open c-file to exert pressure on c6.",
+          "ar": "ضع القلعة على العمود نصف المفتوح c للضغط على البيدق c6."
+        },
+        "fen": "r2q1rk1/pp2bppp/2p5/3pP3/3P4/2N2N2/PP3PPP/R2Q1RK1 w - - 0 1",
+        "solutionSan": "Rc1",
+        "hint": {
+          "fr": "La colonne c est semi-ouverte : amenez la Tour a1 en c1.",
+          "en": "Move the a1 Rook onto the c-file.",
+          "ar": "انقل القلعة من a1 إلى c1."
+        }
+      }
+    },
+    {
+      "id": "w5-s2",
+      "title": {
+        "fr": "Contrôler la colonne ouverte (Batterie de Tours)",
+        "en": "Seizing the Open File (Doubling Rooks)",
+        "ar": "السيطرة على العمود المفتوح (مضاعفة القلاع)"
+      },
+      "fen": "2r2rk1/pp3ppp/8/8/8/8/PP3PPP/2R1R1K1 w - - 0 1",
+      "body": {
+        "fr": "Une Tour sur une colonne ouverte contrôle 7e et 8e rangées. Doublez vos Tours (« canon d’Alekhine ») pour prendre l’avantage décisif.",
+        "en": "A Rook on an open file threatens to invade the 7th rank. Double your Rooks behind each other to seize control.",
+        "ar": "القلعة على العمود المفتوح تهدد باختراق الصف السابع. ضاعف قلعتيك لفرض السيطرة."
+      },
+      "keyIdea": {
+        "fr": "Une seule Tour est souvent échangée ; deux Tours doublées imposent l’invasion.",
+        "en": "One Rook can be traded off; doubled Rooks win the file.",
+        "ar": "قلعة واحدة قد تُستبدل، أما القلعتان المتضاعفتان فتفرضان الاختراق."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Doublez vos Tours sur la colonne c pour contester c8.",
+          "en": "Double your Rooks on the open c-file.",
+          "ar": "ضاعف قلعتيك على العمود المفتوح c."
+        },
+        "fen": "2r2rk1/pp3ppp/8/8/8/8/PP3PPP/2R1R1K1 w - - 0 1",
+        "solutionSan": "Re2",
+        "hint": {
+          "fr": "Placez la Tour e1 en e2 pour préparer le doublement en c2 sur la colonne ouverte.",
+          "en": "Lift the e1 Rook to e2 to prepare doubling on c2 along the open c-file.",
+          "ar": "ارفع القلعة من e1 إلى e2 تمهيداً لمضاعفتها على العمود c في المربع c2."
+        }
+      }
+    },
+    {
+      "id": "w5-s3",
+      "title": {
+        "fr": "La 7e rangée absolue",
+        "en": "Invading the 7th Rank",
+        "ar": "اختراق الصف السابع"
+      },
+      "fen": "4r1k1/p4ppp/8/8/8/8/P4PPP/2R3K1 w - - 0 1",
+      "body": {
+        "fr": "Une Tour sur la 7e rangée paralyse le Roi adverse et attaque simultanément les pions de la base.",
+        "en": "A Rook on the 7th rank traps the enemy King on the back rank and attacks all unmoved pawns.",
+        "ar": "القلعة في الصف السابع تشل حركة ملك الخصم وتهاجم بيادق القاعدة في آنٍ واحد."
+      },
+      "keyIdea": {
+        "fr": "La 7e rangée vaut souvent au moins un pion de compensation.",
+        "en": "An active Rook on the 7th rank is easily worth a pawn.",
+        "ar": "القلعة النشطة في الصف السابع تساوي في قيمتها بيدقاً على الأقل."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Envahissez la 7e rangée avec votre Tour blanche !",
+          "en": "Invade the 7th rank with your White Rook!",
+          "ar": "اخترق الصف السابع بقلعتك البيضاء!"
+        },
+        "fen": "4r1k1/p4ppp/8/8/8/8/P4PPP/2R3K1 w - - 0 1",
+        "solutionSan": "Rc7",
+        "hint": {
+          "fr": "Montez la Tour sur la case c7.",
+          "en": "Move the Rook to c7.",
+          "ar": "انقل القلعة إلى c7."
+        }
+      }
+    },
+    {
+      "id": "w5-s4",
+      "title": {
+        "fr": "Échanger les défenseurs de l’avant-poste",
+        "en": "Eliminating the Outpost Defender",
+        "ar": "إزالة المدافع عن النقطة المتقدمة"
+      },
+      "fen": "r4rk1/pp2ppbp/2np2p1/3N4/4P3/4B3/PPP2PPP/R4RK1 w - - 0 1",
+      "body": {
+        "fr": "Votre Cavalier en d5 domine le centre. Protégez votre majorité ou capturez les pièces qui pourraient le chasser.",
+        "en": "Your d5 Knight dominates the center. Secure its support or win key pawns along the b-file.",
+        "ar": "حصانك في d5 يسيطر على المركز. ثبت موقعه واضغط على أجنحة الخصم."
+      },
+      "keyIdea": {
+        "fr": "Un Cavalier en d5 soutenu par c3/e4 est souvent plus fort qu’un Fou.",
+        "en": "A centralized Knight on d5 often outperforms a Bishop in semi-closed positions.",
+        "ar": "الحصان المركزي في d5 غالباً ما يتفوق على الفيل في الأوضاع شبه المغلقة."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Gagnez le pion e7 avec échec en utilisant la fourchette du Cavalier d5 ?",
+          "en": "Win the e7 pawn with check using the d5 Knight!",
+          "ar": "اربح البيدق e7 مع كش بالحصان d5!"
+        },
+        "fen": "r4rk1/pp2ppbp/2np2p1/3N4/4P3/4B3/PPP2PPP/R4RK1 w - - 0 1",
+        "solutionSan": "Nxe7+",
+        "hint": {
+          "fr": "Le Cavalier d5 prend en e7 avec échec sur le Roi g8 !",
+          "en": "Nxe7+ forks King and Knight c6? Wait: Nxe7+ attacks g8 and c6!",
+          "ar": "Nxe7+ تهاجم الملك الأسود وتهاجم الحصان في c6!"
+        }
+      }
+    }
+  ]
+}

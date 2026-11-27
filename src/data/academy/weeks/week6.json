@@ -1,0 +1,118 @@
+{
+  "weekNumber": 6,
+  "phase": "middlegame",
+  "title": {
+    "fr": "Semaine 6 : Sécurité du Roi, Découverte & Attaque sur le roque",
+    "en": "Week 6: King Safety, Discovered Attacks & Castled King Assault",
+    "ar": "الأسبوع 6: أمان الملك، الهجوم بالكشف والهجوم على التبييت"
+  },
+  "summary": {
+    "fr": "Protéger son propre Roi tout en ouvrant des lignes contre le Roi adverse.",
+    "en": "Keep your own King sheltered while opening files and diagonals against the enemy King.",
+    "ar": "تأمين ملكك مع فتح الأعمدة والأقطار ضد ملك الخصم."
+  },
+  "keyTakeaways": [
+    {
+      "fr": "Ne poussez les pions devant votre propre roque qu’en cas de nécessité claire.",
+      "en": "Avoid pushing the pawns shielding your castled King without a clear reason.",
+      "ar": "تجنب دفع البيادق التي تحمي ملكك المبيّت دون سبب واضح."
+    },
+    {
+      "fr": "Une attaque à la découverte peut gagner une pièce même si la pièce qui bouge semble modeste.",
+      "en": "A discovered check often wins material because the enemy must answer the check first.",
+      "ar": "الكش بالكشف يربح قطعاً لأن الخصم مجبر على الرد على الكش أولاً."
+    }
+  ],
+  "slides": [
+    {
+      "id": "w6-s1",
+      "title": {
+        "fr": "Le sacrifice grec sur h7 (Bxh7+)",
+        "en": "The Greek Gift Sacrifice (Bxh7+)",
+        "ar": "تضحية الفيل الكلاسيكية في h7"
+      },
+      "fen": "r1bq1rk1/ppp2ppp/2n1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R w KQ - 0 1",
+      "body": {
+        "fr": "Lorsque le Cavalier f6 disparaît et que votre Fou d3, votre Cavalier f3 et votre Dame d1 visent h7, le sacrifice Bxh7+ devient une arme redoutable.",
+        "en": "When the f6 defender is absent and your Bishop, Knight, and Queen eye h7, Bxh7+ often breaks the King's shelter wide open.",
+        "ar": "عندما يغيب المدافع عن h7 وتتجه قطعك نحو جناح الملك، تصبح التضحية Bxh7+ سلاحاً حاسماً."
+      },
+      "keyIdea": {
+        "fr": "Vérifiez toujours : Fou + Cavalier + Dame peuvent-ils rejoindre l’attaque sur h7/g7 ?",
+        "en": "Check the classic trio: Bishop on d3, Knight on f3/g5, Queen on h5.",
+        "ar": "تحقق من الثلاثي الكلاسيكي: الفيل، الحصان، والوزيرة نحو h7."
+      },
+      "quiz": {
+        "question": {
+          "fr": "Quel défenseur noir empêche généralement le sacrifice Bxh7+ ?",
+          "en": "Which Black defender usually stops the Bxh7+ sacrifice?",
+          "ar": "أي مدافع أسود يمنع عادة تضحية Bxh7+؟"
+        },
+        "options": [
+          { "fr": "Un Cavalier en f6 qui contrôle h7 et g4", "en": "A Knight on f6 guarding h7 and g4", "ar": "الحصان في f6 الذي يحرس h7 و g4" },
+          { "fr": "Une Tour en a8", "en": "A Rook on a8", "ar": "القلعة في a8" },
+          { "fr": "Un pion en a6", "en": "A pawn on a6", "ar": "البيدق في a6" }
+        ],
+        "correctIndex": 0,
+        "explanation": {
+          "fr": "Le Cavalier en f6 protège directement h7 et empêche la Dame blanche de bondir en h5.",
+          "en": "The f6 Knight directly defends h7 and prevents Ng5/Qh5.",
+          "ar": "الحصان في f6 يحمي h7 مباشرة ويمنع تسلل الحصان والوزيرة."
+        }
+      }
+    },
+    {
+      "id": "w6-s2",
+      "title": {
+        "fr": "L’échec à la découverte",
+        "en": "The Discovered Check",
+        "ar": "الكش بالكشف"
+      },
+      "fen": "4k3/8/8/4q3/8/4N3/8/4R1K1 w - - 0 1",
+      "body": {
+        "fr": "En déplaçant la pièce écran (ici le Cavalier e3), vous libérez l’attaque de la Tour e1 sur la colonne e !",
+        "en": "By moving the screening piece (the e3 Knight), you unleash the e1 Rook down the e-file!",
+        "ar": "بتحريك القطعة الحاجبة (الحصان في e3)، تطلق هجوم القلعة على العمود e!"
+      },
+      "keyIdea": {
+        "fr": "Cherchez une pièce qui peut sauter pour capturer ou attaquer pendant que la ligne derrière elle donne échec.",
+        "en": "Look for a piece that can jump away with a threat while uncovering a check.",
+        "ar": "ابحث عن قطعة تقفز لتهديد هدف بينما تكشف كشاً خلفها."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Trouvez le coup de Cavalier qui capture ou menace et libère la colonne e ! (Attention : la Dame noire est sur e5, donc le Roi e8 est couvert par la Dame ? Si le Cavalier saute avec échec ou attaque la Dame !)",
+          "en": "Wait: the Black Queen on e5 shields e8! Jump the Knight to fork or win the Queen!",
+          "ar": "اقفز بالحصان لتكشف الهجوم على الوزيرة السوداء!"
+        },
+        "fen": "4k3/8/8/4q3/8/4N3/8/4R1K1 w - - 0 1",
+        "solutionSan": "Ng4",
+        "hint": {
+          "fr": "En jouant Cg4, le Cavalier attaque la Dame e5 tout en découvrant le clouage de la Tour e1 sur le Roi e8 !",
+          "en": "Ng4 attacks the Queen while uncovering the e1 Rook's absolute pin on e5!",
+          "ar": "Ng4 يهاجم الوزيرة ويكشف التثبيت المطلق للقلعة على العمود e!"
+        }
+      }
+    },
+    {
+      "id": "w6-s3",
+      "title": {
+        "fr": "Partie modèle : L’Opéra de Paris (Morphy, 1858)",
+        "en": "Master Walkthrough: The Opera Game (Morphy, 1858)",
+        "ar": "دور نموذجي: مباراة الأوبرا (مورفي 1858)"
+      },
+      "fen": "4k2r/p1pn1ppp/1p6/3P4/8/2Q5/PPP2PPP/3R1RK1 w k - 0 15",
+      "body": {
+        "fr": "Lorsque le Roi adverse reste bloqué au centre sans roquer, ouvrez les colonnes centrales et sacrifiez pour conclure avant que ses Tours ne jouent.",
+        "en": "When the enemy King stays stranded in the center uncastled, open central files and sacrifice to strike before its Rooks enter play.",
+        "ar": "عندما يبقى ملك الخصم عالقاً في المركز دون تبييت، افتح الأعمدة الوسطى وهاجم قبل دخول قلاعه في اللعب."
+      },
+      "keyIdea": {
+        "fr": "Ne laissez jamais un Roi non roqué respirer : chaque coup doit créer une menace.",
+        "en": "Never let an uncastled King consolidate — create threats with every move.",
+        "ar": "لا تترك الملك غير المبيّت يتنفس؛ اجعل كل نقلة تحمل تهديداً."
+      },
+      "demoMovesSan": ["Rfe1+", "Kd8", "Qxg7"]
+    }
+  ]
+}

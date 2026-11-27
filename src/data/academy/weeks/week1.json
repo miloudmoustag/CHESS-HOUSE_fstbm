@@ -1,0 +1,167 @@
+{
+  "weekNumber": 1,
+  "phase": "endgame",
+  "title": {
+    "fr": "Semaine 1 : Mats élémentaires & Activité du Roi",
+    "en": "Week 1: Basic Checkmates & King Activity",
+    "ar": "الأسبوع 1: الكش مات الأساسي ونشاط الملك"
+  },
+  "summary": {
+    "fr": "Comprendre comment la Dame et la Tour collaborent avec le Roi pour enfermer le Roi adverse au bord.",
+    "en": "Learn how the Queen and Rook coordinate with the King to drive the enemy King to the edge.",
+    "ar": "تعلّم كيف تتعاون الوزيرة والقلعة مع الملك لدفع ملك الخصم نحو حافة الرقعة."
+  },
+  "keyTakeaways": [
+    {
+      "fr": "En finale, le Roi devient une pièce active : amenez-le vers le centre.",
+      "en": "In the endgame, the King becomes an active fighting piece — centralize it early.",
+      "ar": "في النهايات يصبح الملك قطعة هجومية نشطة، وجّهه نحو المركز مبكراً."
+    },
+    {
+      "fr": "La technique de la boîte : coupez le Roi adverse plutôt que de multiplier les échecs inutiles.",
+      "en": "The box method: cut off the enemy King's squares instead of giving aimless checks.",
+      "ar": "تقنية الصندوق: احصر ملك الخصم بقطع المربعات بدل إعطائه كشات متكررة بلا فائدة."
+    }
+  ],
+  "slides": [
+    {
+      "id": "w1-s1",
+      "title": {
+        "fr": "Le Roi est une pièce active",
+        "en": "The King as an Active Piece",
+        "ar": "الملك قطعة نشطة في النهايات"
+      },
+      "fen": "8/8/4k3/8/8/4K3/8/R7 w - - 0 1",
+      "body": {
+        "fr": "Dans l’ouverture et le milieu de jeu, le Roi doit rester à l’abri. Dès que les dames disparaissent, le Roi doit marcher vers le centre pour contrôler les cases clés.",
+        "en": "In the opening and middlegame, keep your King safe. Once queens leave the board, march your King toward the center to control key squares.",
+        "ar": "في الافتتاحية ووسط اللعب نحمي الملك، أما عند اختفاء الوزيرتين فيجب تحريك الملك نحو المركز للسيطرة على المربعات الحاسمة."
+      },
+      "keyIdea": {
+        "fr": "Rapprochez votre Roi du centre avant de pousser vos pions ou de forcer le mat.",
+        "en": "Bring your King toward the center before pushing pawns or forcing mate.",
+        "ar": "قرّب ملكك من المركز قبل دفع البيادق أو تنفيذ الكش مات."
+      },
+      "highlights": ["e3", "e4", "d4", "f4"],
+      "demoMovesSan": ["Kd4", "Kd6", "Ra6+"],
+      "exercise": {
+        "prompt": {
+          "fr": "Coupez le Roi noir sur la 5e rangée avec la Tour blanche.",
+          "en": "Cut off the Black King along the 5th rank with the White Rook.",
+          "ar": "اقطع الطريق أمام الملك الأسود على الصف الخامس باستخدام القلعة البيضاء."
+        },
+        "fen": "8/8/4k3/8/8/4K3/8/R7 w - - 0 1",
+        "solutionSan": "Ra5",
+        "hint": {
+          "fr": "Placez la Tour sur la 5e rangée (Ra5) pour réduire la boîte du Roi noir.",
+          "en": "Place the Rook on the 5th rank (Ra5) to shrink the Black King's box.",
+          "ar": "ضع القلعة في الصف الخامس (Ra5) لتضييق المساحة أمام الملك الأسود."
+        }
+      }
+    },
+    {
+      "id": "w1-s2",
+      "title": {
+        "fr": "Mat avec Dame et Roi",
+        "en": "Queen & King Checkmate",
+        "ar": "كش مات بالوزيرة والملك"
+      },
+      "fen": "8/8/8/4k3/8/8/3Q4/4K3 w - - 0 1",
+      "body": {
+        "fr": "Placez la Dame à distance de cavalier du Roi adverse pour rétrécir sa cage, puis approchez votre propre Roi. Attention au pat lorsque le Roi adverse est au coin !",
+        "en": "Place your Queen a knight's jump away from the enemy King to shrink its cage, then bring your own King closer. Watch out for stalemate near the corner!",
+        "ar": "ضع الوزيرة على بُعد قفزة حصان من ملك الخصم لتضييق مساحته، ثم قرّب ملكك. احذر من التعادل بالخنق (Pat) عند الزاوية!"
+      },
+      "keyIdea": {
+        "fr": "Laissez toujours au moins deux cases de fuite au Roi adverse avant que votre Roi arrive.",
+        "en": "Always leave the enemy King at least two squares while bringing your King up.",
+        "ar": "اترك دائماً مربعين على الأقل لملك الخصم أثناء تقريب ملكك."
+      },
+      "highlights": ["d4", "c6"],
+      "quiz": {
+        "question": {
+          "fr": "Quelle est l’erreur la plus fréquente dans la finale Dame + Roi contre Roi ?",
+          "en": "What is the most common mistake in Queen + King vs King?",
+          "ar": "ما هو الخطأ الأكثر شيوعاً في نهاية الوزيرة والملك ضد الملك؟"
+        },
+        "options": [
+          { "fr": "Provoquer un pat accidentel au bord de l’échiquier", "en": "Accidentally causing stalemate on the edge", "ar": "الوقوع في التعادل بالخنق عند حافة الرقعة" },
+          { "fr": "Avancer son propre Roi vers le centre", "en": "Moving your own King toward the center", "ar": "تقديم ملكك نحو المركز" },
+          { "fr": "Utiliser la Dame pour couper une rangée", "en": "Using the Queen to cut off a rank", "ar": "استعمال الوزيرة لقطع أحد الصفوف" }
+        ],
+        "correctIndex": 0,
+        "explanation": {
+          "fr": "La Dame contrôle tellement de cases qu’il est facile de priver le Roi adverse de tout coup légal sans lui faire échec.",
+          "en": "The Queen covers so many squares that it is easy to leave the lone King with zero legal moves and no check.",
+          "ar": "الوزيرة تسيطر على مربعات كثيرة، لذا يسهل حرمان الملك الوحيد من أي نقلة قانونية دون كش."
+        }
+      }
+    },
+    {
+      "id": "w1-s3",
+      "title": {
+        "fr": "Mat avec une seule Tour",
+        "en": "Rook & King Checkmate",
+        "ar": "كش مات بقلعة واحدة وملك"
+      },
+      "fen": "6k1/8/6K1/8/8/8/8/R7 w - - 0 1",
+      "body": {
+        "fr": "Avec une Tour seule, le Roi attaquant doit se placer en opposition face au Roi adverse afin que la Tour puisse délivrer le mat sur la dernière rangée.",
+        "en": "With a lone Rook, your King must stand in opposition to the enemy King so the Rook can deliver checkmate along the back rank.",
+        "ar": "بقلعة واحدة، يجب أن يقف ملكك في مواجهة ملك الخصم لتنفذ القلعة الكش مات على الصف الأخير."
+      },
+      "keyIdea": {
+        "fr": "Opposition des Rois + Tour sur la rangée du bord = échec et mat.",
+        "en": "King opposition + Rook sweep on the edge rank = checkmate.",
+        "ar": "تقابل الملكين + القلعة على الصف الأخير = كش مات."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Les Blancs jouent et font mat en 1 coup !",
+          "en": "White to move and checkmate in 1!",
+          "ar": "الأبيض يلعب وينفذ كش مات في نقلة واحدة!"
+        },
+        "fen": "6k1/8/6K1/8/8/8/8/R7 w - - 0 1",
+        "solutionSan": "Ra8#",
+        "hint": {
+          "fr": "Le Roi noir ne peut pas descendre en g7 à cause du Roi blanc en g6.",
+          "en": "The Black King cannot step to g7 because the White King guards f7, g7, h7.",
+          "ar": "الملك الأبيض في g6 يمنع الملك الأسود من النزول، أرسل القلعة للصف الثامن."
+        }
+      }
+    },
+    {
+      "id": "w1-s4",
+      "title": {
+        "fr": "L’escalier à deux Tours",
+        "en": "The Two-Rook Ladder Mate",
+        "ar": "سُلّم القلعتين"
+      },
+      "fen": "3k4/R7/1R6/8/8/8/8/6K1 w - - 0 1",
+      "body": {
+        "fr": "Deux Tours montent rangée par rangée comme un escalier : une Tour garde la rangée courante pendant que l’autre chasse le Roi sur la rangée suivante.",
+        "en": "Two Rooks climb rank by rank like a ladder: one Rook holds the current barrier while the other pushes the King back.",
+        "ar": "قلعتان تصعدان صفاً بعد صف مثل السلم: قلعة تغلق الصف الحالي والأخرى تدفع الملك للخلف."
+      },
+      "keyIdea": {
+        "fr": "Gardez vos deux Tours sur des colonnes différentes pour qu’elles ne se gênent jamais.",
+        "en": "Keep your Rooks on separate files so they never block each other.",
+        "ar": "أبقِ القلعتين على عمودين مختلفين كي لا تعيق إحداهما الأخرى."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Terminez le mat en 1 coup avec la Tour en b6.",
+          "en": "Finish the ladder mate in 1 with the b6 Rook.",
+          "ar": "أتمم كش مات السلم في نقلة واحدة بالقلعة في b6."
+        },
+        "fen": "3k4/R7/1R6/8/8/8/8/6K1 w - - 0 1",
+        "solutionSan": "Rb8#",
+        "hint": {
+          "fr": "La Tour a7 bloque toute la 7e rangée.",
+          "en": "The a7 Rook seals the entire 7th rank.",
+          "ar": "القلعة في a7 تغلق الصف السابع بالكامل."
+        }
+      }
+    }
+  ]
+}

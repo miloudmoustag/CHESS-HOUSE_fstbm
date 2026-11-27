@@ -1,0 +1,160 @@
+{
+  "weekNumber": 7,
+  "phase": "opening",
+  "title": {
+    "fr": "Semaine 7 : Les 3 Règles d’Or de l’Ouverture",
+    "en": "Week 7: The Three Golden Rules of the Opening",
+    "ar": "الأسبوع 7: القواعد الذهبية الثلاث للافتتاحية"
+  },
+  "summary": {
+    "fr": "Pourquoi nous arrivons seulement maintenant aux ouvertures : contrôler le centre, développer les pièces légères et roquer tôt.",
+    "en": "Why openings come last in our curriculum: control the center, develop minor pieces, and castle early.",
+    "ar": "لماذا ندرس الافتتاحيات أخيراً: السيطرة على المركز، نشر القطع الخفيفة، والتبييت المبكر."
+  },
+  "keyTakeaways": [
+    {
+      "fr": "1. Occupez le centre (e4, d4, e5, d5) · 2. Développez Cavaliers et Fous · 3. Mettez le Roi à l’abri (roque).",
+      "en": "1. Claim the center · 2. Develop Knights and Bishops · 3. Castle your King to safety.",
+      "ar": "1. السيطرة على المركز · 2. نشر الأحصنة والأفيال · 3. تبييت الملك."
+    },
+    {
+      "fr": "Évitez de déplacer la même pièce deux fois ou de sortir la Dame trop tôt.",
+      "en": "Avoid moving the same piece twice or bringing the Queen out prematurely.",
+      "ar": "تجنب تحريك نفس القطعة مرتين أو إخراج الوزيرة مبكراً."
+    }
+  ],
+  "slides": [
+    {
+      "id": "w7-s1",
+      "title": {
+        "fr": "Règle 1 : Contrôler le centre",
+        "en": "Rule 1: Control the Center",
+        "ar": "القاعدة 1: السيطرة على المركز"
+      },
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "body": {
+        "fr": "Les quatre cases centrales (e4, d4, e5, d5) permettent à vos pièces de rayonner vers les deux ailes. Commencez par 1.e4 ou 1.d4.",
+        "en": "The four central squares (e4, d4, e5, d5) give your pieces maximum reach toward both wings. Start by claiming the center.",
+        "ar": "المربعات المركزية الأربع تمنح قطعك أقصى مدى نحو الجناحين. ابدأ بالسيطرة على المركز."
+      },
+      "keyIdea": {
+        "fr": "Un pion au centre libère simultanément un Fou et la Dame.",
+        "en": "A central pawn move opens lines for both a Bishop and the Queen.",
+        "ar": "نقلة البيدق المركزي تفتح خطوطاً للفيل والوزيرة معاً."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Jouez le coup d’ouverture classique qui occupe e4 et libère le Fou f1.",
+          "en": "Play the classic central opening move occupying e4.",
+          "ar": "العب نقلة الافتتاحية الكلاسيكية التي تحتل e4."
+        },
+        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+        "solutionSan": "e4",
+        "hint": {
+          "fr": "Avancez le pion devant le Roi de deux cases.",
+          "en": "Advance the King's pawn two squares.",
+          "ar": "ادفع بيدق الملك خطوتين إلى e4."
+        }
+      }
+    },
+    {
+      "id": "w7-s2",
+      "title": {
+        "fr": "Règle 2 : Développer Cavaliers avant Fous",
+        "en": "Rule 2: Knights Before Bishops",
+        "ar": "القاعدة 2: نشر الأحصنة قبل الأفيال"
+      },
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "body": {
+        "fr": "Les Cavaliers n’ont généralement qu’une ou deux bonnes cases naturelles (f3/c3) tandis que les Fous peuvent choisir leur diagonale selon la réponse adverse.",
+        "en": "Knights have clear natural squares (f3/c3), whereas Bishops can wait to see which diagonal is strongest.",
+        "ar": "الأحصنة لها مربعات طبيعية واضحة (f3 و c3)، بينما الأفيال يمكنها انتظار القطر الأنسب."
+      },
+      "keyIdea": {
+        "fr": "Développez Nf3 en attaquant directement le pion e5.",
+        "en": "Develop Nf3 with a tempo against the e5 pawn.",
+        "ar": "طوّر الحصان إلى f3 مع تهديد البيدق e5."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Développez votre Cavalier roi tout en attaquant le pion e5.",
+          "en": "Develop your Kingside Knight while attacking e5.",
+          "ar": "انشر حصان الملك مع مهاجمة البيدق e5."
+        },
+        "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+        "solutionSan": "Nf3",
+        "hint": {
+          "fr": "Sortez le Cavalier g1 vers f3.",
+          "en": "Move the g1 Knight to f3.",
+          "ar": "انقل الحصان من g1 إلى f3."
+        }
+      }
+    },
+    {
+      "id": "w7-s3",
+      "title": {
+        "fr": "Règle 3 : Punir la sortie prématurée de la Dame",
+        "en": "Rule 3: Punish an Early Queen",
+        "ar": "القاعدة 3: معاقبة الخروج المبكر للوزيرة"
+      },
+      "fen": "rnb1kbnr/pppp1ppp/8/4p2q/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 2 3",
+      "body": {
+        "fr": "Si l’adversaire sort sa Dame en h5 trop tôt, ne paniquez pas : développez vos pièces légères en la chassant pour gagner des temps.",
+        "en": "When an opponent brings the Queen out early, develop minor pieces that attack it to gain free tempi.",
+        "ar": "إذا أخرج الخصم وزرته مبكراً، طور قطعك الخفيفة بمهاجمتها لربح الوقت."
+      },
+      "keyIdea": {
+        "fr": "Chaque tempo gagné en chassant la Dame accélère votre roque.",
+        "en": "Every tempo gained chasing the Queen brings you closer to castling.",
+        "ar": "كل نقلة تربحها بمطاردة الوزيرة تقرّبك من التبييت."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Développez votre Cavalier en chassant la Dame noire ? Ou développez le Fou e2 ! Ici Nf3 attaque la Dame h5 !",
+          "en": "Develop a Knight while attacking the Black Queen on h5!",
+          "ar": "طور حصانك مع مهاجمة الوزيرة السوداء في h5!"
+        },
+        "fen": "rnb1kbnr/pppp1ppp/8/4p2q/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 2 3",
+        "solutionSan": "Nf3",
+        "hint": {
+          "fr": "Cavalier en f3 attaque h5 tout en développant l’aile roi.",
+          "en": "Nf3 develops toward the center and hits h5.",
+          "ar": "الحصان إلى f3 يهدد h5 ويفتح الطريق للتبييت."
+        }
+      }
+    },
+    {
+      "id": "w7-s4",
+      "title": {
+        "fr": "Mettre le Roi à l’abri : Le petit roque",
+        "en": "King Safety: Castling Kingside",
+        "ar": "أمان الملك: التبييت القصير"
+      },
+      "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "body": {
+        "fr": "Une fois le Cavalier et le Fou sortis, roquez pour abriter votre Roi et connecter vos Tours.",
+        "en": "Once your Knight and Bishop have developed, castle to shelter your King and activate your Rook.",
+        "ar": "بعد نشر الحصان والفيل، قم بالتبييت لحماية ملكك وإدخال القلعة في اللعب."
+      },
+      "keyIdea": {
+        "fr": "Le roque est le seul coup qui déplace deux pièces en même temps.",
+        "en": "Castling is the only move that improves two pieces in a single turn.",
+        "ar": "التبييت هو النقلة الوحيدة التي تحرك قطعتين في دور واحد."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Effectuez le petit roque pour sécuriser le Roi blanc.",
+          "en": "Castle kingside to secure the White King.",
+          "ar": "نفّذ التبييت القصير لتأمين الملك الأبيض."
+        },
+        "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+        "solutionSan": "O-O",
+        "hint": {
+          "fr": "Déplacez le Roi e1 vers g1.",
+          "en": "Move the e1 King to g1.",
+          "ar": "حرك الملك من e1 إلى g1."
+        }
+      }
+    }
+  ]
+}

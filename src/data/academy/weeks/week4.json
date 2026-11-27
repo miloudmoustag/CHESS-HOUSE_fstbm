@@ -1,0 +1,164 @@
+{
+  "weekNumber": 4,
+  "phase": "middlegame",
+  "title": {
+    "fr": "Semaine 4 : Tactique fondamentale (Fourchette, Clouage, Enfilade)",
+    "en": "Week 4: Core Tactics (Fork, Pin, Skewer)",
+    "ar": "الأسبوع 4: التكتيك الأساسي (الشوكة، التثبيت، السيخ)"
+  },
+  "summary": {
+    "fr": "Repérer les pièces non protégées et exploiter les alignements géométriques.",
+    "en": "Spot undefended pieces and exploit geometric alignments across files, ranks, and diagonals.",
+    "ar": "رصد القطع غير المحمية واستغلال الاصطفافات الهندسية على الأعمدة والصفوف والأقطار."
+  },
+  "keyTakeaways": [
+    {
+      "fr": "Cherchez toujours : Échecs, Prises, Menaces (CCT) avant de jouer.",
+      "en": "Always scan Checks, Captures, Threats (CCT) before committing to a move.",
+      "ar": "تحقق دائماً من الكشات، الأخذ، والتهديدات قبل تنفيذ نقلتك."
+    },
+    {
+      "fr": "Les pièces lâches (sans défense) sont la cible numéro un de toutes les tactiques.",
+      "en": "Loose (undefended) pieces are the number one ingredient for tactical combinations.",
+      "ar": "القطع غير المحمية هي الوقود الأول لكل الضربات التكتيكية."
+    }
+  ],
+  "slides": [
+    {
+      "id": "w4-s1",
+      "title": {
+        "fr": "La fourchette de Cavalier",
+        "en": "The Knight Fork",
+        "ar": "شوكة الحصان"
+      },
+      "fen": "4k3/8/8/3N4/8/2r5/8/4K3 w - - 0 1",
+      "body": {
+        "fr": "Grâce à son saut unique, le Cavalier attaque souvent le Roi et une pièce lourde simultanément sans pouvoir être capturé par ses victimes.",
+        "en": "Because of its unique L-shaped jump, a Knight often attacks the King and a major piece simultaneously without either victim being able to capture it.",
+        "ar": "بفضل قفزته الفريدة، يهاجم الحصان غالباً الملك وقطعة ثقيلة في آنٍ واحد دون أن تتمكن الضحيتان من أخذه."
+      },
+      "keyIdea": {
+        "fr": "Repérez les pièces non défendues à portée de saut de Cavalier.",
+        "en": "Spot undefended pieces within a Knight's jump.",
+        "ar": "انتبه للقطع غير المحمية ضمن مدى قفزة الحصان."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Capturez la Tour noire non protégée avec le Cavalier.",
+          "en": "Capture the undefended Black Rook with the Knight.",
+          "ar": "التقط القلعة السوداء غير المحمية بالحصان."
+        },
+        "fen": "4k3/8/8/3N4/8/2r5/8/4K3 w - - 0 1",
+        "solutionSan": "Nxc3",
+        "hint": {
+          "fr": "La Tour en c3 est directement à portée du Cavalier d5.",
+          "en": "The Rook on c3 is hanging directly to the Knight on d5.",
+          "ar": "القلعة في c3 مكشوفة مباشرة أمام الحصان في d5."
+        }
+      }
+    },
+    {
+      "id": "w4-s2",
+      "title": {
+        "fr": "Fourchette royale (Roi + Tour)",
+        "en": "Royal Fork (King + Rook)",
+        "ar": "الشوكة الملكية (الملك + القلعة)"
+      },
+      "fen": "r3k3/8/8/3N4/8/8/8/4K3 w - - 0 1",
+      "body": {
+        "fr": "Le Cavalier vise c7 pour attaquer à la fois le Roi en e8 et la Tour en a8.",
+        "en": "The Knight leaps to c7 to attack both the King on e8 and the Rook on a8.",
+        "ar": "يقفز الحصان إلى c7 لمهاجمة الملك في e8 والقلعة في a8 معاً."
+      },
+      "keyIdea": {
+        "fr": "Une fourchette donnant échec ne laisse aucun temps de contre-attaque à l’adversaire.",
+        "en": "A checking fork leaves the opponent zero time to counterattack.",
+        "ar": "الشوكة المصحوبة بكش لا تترك للخصم أي وقت للهجوم المضاد."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Jouez la fourchette sur le Roi e8 et la Tour a8.",
+          "en": "Play the Knight fork attacking both the King on e8 and the Rook on a8.",
+          "ar": "العب شوكة الحصان لمهاجمة الملك والقلعة في a8."
+        },
+        "fen": "r3k3/8/8/3N4/8/8/8/4K3 w - - 0 1",
+        "solutionSan": "Nc7+",
+        "hint": {
+          "fr": "Sautez en c7 avec échec !",
+          "en": "Jump to c7 with check!",
+          "ar": "اقفز إلى c7 مع كش!"
+        }
+      }
+    },
+    {
+      "id": "w4-s3",
+      "title": {
+        "fr": "Le Clouage absolu",
+        "en": "The Absolute Pin",
+        "ar": "التثبيت المطلق"
+      },
+      "fen": "4k3/3n4/8/8/B7/8/8/3R2K1 w - - 0 1",
+      "body": {
+        "fr": "Une pièce clouée devant son Roi ne peut légalement pas bouger. Profitez-en pour l’attaquer une seconde fois (« attaquer la pièce clouée »).",
+        "en": "A piece pinned to its own King cannot legally move. Pile up a second attacker on the pinned piece to win it.",
+        "ar": "القطعة المثبتة أمام ملكها لا يمكنها التحرك قانونياً. هاجمها بقطعة ثانية لربحها."
+      },
+      "keyIdea": {
+        "fr": "Ajoutez de la pression sur la pièce clouée plutôt que d’échanger trop vite.",
+        "en": "Put extra pressure on the pinned piece.",
+        "ar": "ضع ضغطاً إضافياً على القطعة المثبتة."
+      },
+      "exercise": {
+        "prompt": {
+          "fr": "Le Cavalier d7 est cloué par le Fou a4. Prenez-le ou attaquez-le décisivement avec le Fou.",
+          "en": "The d7 Knight is pinned to the e8 King. Capture it with the Bishop for check!",
+          "ar": "الحصان في d7 مثبت أمام الملك. التقطه بالفيل مع كش!"
+        },
+        "fen": "4k3/3n4/8/8/B7/8/8/3R2K1 w - - 0 1",
+        "solutionSan": "Bxd7+",
+        "hint": {
+          "fr": "Le Fou a4 et la Tour d1 attaquent tous deux d7.",
+          "en": "Both the a4 Bishop and d1 Rook attack d7.",
+          "ar": "الفيل في a4 والقلعة في d1 يهاجمان المربع d7."
+        }
+      }
+    },
+    {
+      "id": "w4-s4",
+      "title": {
+        "fr": "L’Enfilade (Skewer)",
+        "en": "The Skewer",
+        "ar": "السيخ (الهجوم المزدوج على خط واحد)"
+      },
+      "fen": "4k3/8/8/8/8/4Q3/8/R3K2r b - - 0 1",
+      "body": {
+        "fr": "Contrairement au clouage, l’enfilade attaque d’abord la pièce la plus précieuse (souvent le Roi ou la Dame). Quand elle s’écarte, la pièce derrière tombe.",
+        "en": "Unlike a pin, a skewer attacks the more valuable piece first (often the King). When it steps aside, the piece behind falls.",
+        "ar": "على عكس التثبيت، يستهدف السيخ القطعة الأغلى أولاً (كالملك أو الوزيرة)، وعندما تبتعد تسقط القطعة التي خلفها."
+      },
+      "keyIdea": {
+        "fr": "Alignez Roi + Dame ou Roi + Tour sur une même rangée, colonne ou diagonale.",
+        "en": "Look for King + Queen or King + Rook aligned on a single line.",
+        "ar": "ابحث عن اصطفاف الملك والوزيرة أو القلعة على خط مستقيم واحد."
+      },
+      "quiz": {
+        "question": {
+          "fr": "Quelle est la différence entre un clouage et une enfilade ?",
+          "en": "What is the difference between a pin and a skewer?",
+          "ar": "ما الفرق بين التثبيت والسيخ؟"
+        },
+        "options": [
+          { "fr": "Dans l’enfilade, la pièce la plus chère est devant et doit fuir", "en": "In a skewer, the higher-value piece is in front and must move", "ar": "في السيخ تكون القطعة الأغلى في الأمام وتُجبر على الهرب" },
+          { "fr": "Le clouage n’utilise que des Cavaliers", "en": "A pin only uses Knights", "ar": "التثبيت يستخدم الأحصنة فقط" },
+          { "fr": "Il n’y a aucune différence", "en": "There is no difference", "ar": "لا يوجد أي فرق" }
+        ],
+        "correctIndex": 0,
+        "explanation": {
+          "fr": "Clouage = pièce faible devant pièce forte ; Enfilade = pièce forte devant pièce faible.",
+          "en": "Pin = lower-value piece in front of higher-value; Skewer = higher-value piece forced out of the way.",
+          "ar": "التثبيت تكون فيه القطعة الأضعف أمام الأغلى، بينما في السيخ تكون الأغلى في المقدمة."
+        }
+      }
+    }
+  ]
+}
